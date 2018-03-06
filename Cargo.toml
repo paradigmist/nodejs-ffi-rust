@@ -1,0 +1,10 @@
+[package]
+name = "node-ffi"
+version = "0.1.0"
+authors = ["Kane <outofme@outlook.com>"]
+
+[lib]
+name = "ffi"
+crate-type = ["dylib"]
+
+[dependencies]
