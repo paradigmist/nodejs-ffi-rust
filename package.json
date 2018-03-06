@@ -1,10 +1,10 @@
 {
   "name": "node-ffi",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "NodeJS FFI",
+  "main": "fibs.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node fibs.js"
   },
   "keywords": [],
   "author": "",
