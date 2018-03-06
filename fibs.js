@@ -5,12 +5,16 @@ const rust = ffi.Library('target/release/' + (!isWin ? 'lib' : '') + 'ffi', {
   fib: ['int', ['int']]
 })
 
-if (process.argv.length < 3) {
-  console.log('Arguments: ' + process.argv[0] + ' ' + process.argv[1] + ' ???')
+const args = process.argv
+if (args.length < 3) {
+  console.log('Arguments: ' + args[0] + ' ' + args[1] + ' ???')
   process.exit()
+} else if (+args[2] !== +args[2]) {
+	console.log('Argument is not a number!')
+	process.exit()
 }
 
-const input = parseInt(process.argv[2])
+const input = parseInt(args[2])
 
 function fib(n) {
   if (n === 1 || n === 2) {
