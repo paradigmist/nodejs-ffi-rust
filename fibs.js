@@ -5,7 +5,7 @@ const rust = ffi.Library('target/release/' + (!isWin ? 'lib' : '') + 'ffi', {
   fib: ['int', ['int']]
 })
 
-const c = ffi.Library('./build/libfib', {
+const c = ffi.Library('target/release/build/libfib', {
   'fib': [ 'int', [ 'uint64' ] ]
 })
 
