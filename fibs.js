@@ -5,6 +5,10 @@ const rust = ffi.Library('target/release/' + (!isWin ? 'lib' : '') + 'ffi', {
   fib: ['int', ['int']]
 })
 
+const c = ffi.Library('./build/libfib', {
+  'fib': [ 'int', [ 'uint64' ] ]
+})
+
 const args = process.argv
 if (args.length < 3) {
   console.log('Arguments: ' + args[0] + ' ' + args[1] + ' ???')
@@ -31,3 +35,4 @@ function benchmark(str, fn) {
 
 benchmark('node', fib)
 benchmark('rust', rust.fib)
+benchmark('c', c.fib)
