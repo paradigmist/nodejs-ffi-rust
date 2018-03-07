@@ -6,7 +6,7 @@ const rust = ffi.Library('target/release/' + (!isWin ? 'lib' : '') + 'ffi', {
 })
 
 const c = ffi.Library('target/release/build/libfib', {
-  'fib': [ 'int', [ 'uint64' ] ]
+  'fib': [ 'uint64', [ 'int' ] ]
 })
 
 const args = process.argv
