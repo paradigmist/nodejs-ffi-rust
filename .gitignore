@@ -2,5 +2,7 @@ target/
 **/*.rs.bk
 Cargo.lock
 
+**/*.dylib
+
 node_modules/
 *.sh
