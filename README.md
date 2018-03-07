@@ -12,6 +12,6 @@ Using Rust as a NodeJS addon
         + `gcc -O3 -dynamiclib -undefined suppress -flat_namespace src/lib.c -o target/release/build/libfib.dylib`
      * On Linux/Solaris/etc:
         + `gcc -O3 -shared -fpic src/lib.c -o target/release/build/libfib.so`
-4. `node fibs.js 35`
+5. `node fibs.js 35`
 
 Have fun!
