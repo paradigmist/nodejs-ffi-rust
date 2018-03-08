@@ -1,6 +1,6 @@
 # NodeJS FFI with Rust
 
-Using Rust as a NodeJS addon
+Using Rust as a NodeJS addon, comparing with C addon.
 
 # Instructions
 
