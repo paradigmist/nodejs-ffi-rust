@@ -21,7 +21,7 @@ if (args.length < 3) {
 const input = parseInt(args[2])
 
 function fib(n) {
-  if (n === 1 || n === 2) {
+  if (n < 3) {
     return 1
   }
   return fib(n - 1) + fib(n - 2)
